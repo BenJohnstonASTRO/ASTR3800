@@ -17,7 +17,7 @@ np.random.seed(seed_3)
 random_3 = np.random.uniform(low=0, high=1, size=1000)
 
 #A-ii:
-class GENERATOR:
+class GENERATOR: #Generates a new seed using the John von Nuemann method
 	def __init__(self, sd):
 		sq = sd**2
 		self.sq = str(sq)
@@ -28,21 +28,36 @@ class GENERATOR:
 		seed_new = cut[new-3:new+3]
 		self.seed_new = ''.join(seed_new)
 		self.seed_new = int(self.seed_new)
-seed_4 = GENERATOR(967615).seed_new
-np.random.seed(seed_4)
-random_4 = np.random.uniform(low=0, high=1, size=1000)*1e6
-seed_5 = GENERATOR(seed_4).seed_new
-np.random.seed(seed_5)
-random_5 = np.random.uniform(low=0, high=1, size=1000)*1e6
-seed_6 = GENERATOR(seed_5).seed_new
-np.random.seed(seed_6)
-random_6 = np.random.uniform(low=0, high=1, size=1000)*1e6
 
-plt.plot(random_1, 'k.')
-plt.plot(random_2, 'r.')
-plt.plot(random_3, 'b.')
-plt.plot(random_4, 'y.')
-plt.plot(random_5, 'c.')
-plt.plot(random_6, 'g.')
-plt.show()
+class RANDOM_PLOT: #Plots a random number vs. number
+	def __init__(self, low_limit, high_limit, size, seed_input, color):
+		np.random.seed(seed_input)		
+		random = np.random.uniform(low=low_limit, high=high_limit, size=size)
+		colors = ['k.', 'r.', 'b.', 'y.', 'c.', 'g.', 'm.', ]
+		color = colors[color]
+		plt.figure()
+		plt.plot(random, color)
+		plt.show()
 
+
+sd1 = GENERATOR(101011).seed_new
+np.random.seed(sd1)
+random_JvN1 = np.random.uniform(low=0, high=1e6, size=1000)
+sd2 = GENERATOR(sd1).seed_new
+np.random.seed(sd2)
+random_JvN2 = np.random.uniform(low=0, high=1e6, size=1000)
+sd3 = GENERATOR(sd2).seed_new
+np.random.seed(sd3)
+random_JvN3 = np.random.uniform(low=0, high=1e6, size=1000)
+
+
+#A-iii:
+
+
+#A-iv:
+seed1 = 9713451
+np.random.seed(seed1)
+rand1 = np.random.uniform(low=0, high=64, size=1000)
+
+
+plt.plot(ran
