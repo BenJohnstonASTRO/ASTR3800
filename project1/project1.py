@@ -213,3 +213,6 @@ print '\n \n JvN 100-element array #2: '
 COUNTER(Random_JvN_2_seedarray, bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8, bin9, bin10)
 print '\n \n JvN 100-element array #3: '
 COUNTER(Random_JvN_3_seedarray, bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8, bin9, bin10)
+
+
+#B-iii-b-ii:
