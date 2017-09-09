@@ -10,8 +10,8 @@ import Ben_Johnston_Classes as MY
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy as sp 
-import random
 from scipy.stats import chisquare
+import random
 
 seed_1 = 46128
 np.random.seed(seed_1)
@@ -52,46 +52,46 @@ class RANDOM_JVN_NUMBER:
 		else:
 			print 'There are no duplicates in your random number set.'
 
-Random_JvN_1_seedarray = RANDOM_JVN_NUMBER(555555).random_JvN
-Random_JvN_2_seedarray = RANDOM_JVN_NUMBER(131311).random_JvN
-Random_JvN_3_seedarray = RANDOM_JVN_NUMBER(121212).random_JvN
+Random_JvN_1_seedarray = RANDOM_JVN_NUMBER(101011).random_JvN
+Random_JvN_2_seedarray = RANDOM_JVN_NUMBER(676767).random_JvN
+Random_JvN_3_seedarray = RANDOM_JVN_NUMBER(989812).random_JvN
 
-if len(str(Random_JvN_1_seedarray)) != 6: #Testing to see if the code breaks. If so, it will be fixed in A-iii.
-	print "There are less than 6 digits in one of your seeds."
-	for number in Random_JvN_1_seedarray:
-		number = 123456
-if len(Random_JvN_1_seedarray) != len(set(Random_JvN_1_seedarray)):
-    print "There are duplicates in your random number set. Try a different seed."
+# if len(str(Random_JvN_1_seedarray)) != 6: #Testing to see if the code breaks. If so, it will be fixed in A-iii.
+# 	print "There are less than 6 digits in one of your seeds."
+# 	for number in Random_JvN_1_seedarray:
+# 		number = 123456
+# if len(Random_JvN_1_seedarray) != len(set(Random_JvN_1_seedarray)):
+#     print "There are duplicates in your random number set. Try a different seed."
 
 
 
 #PART B: TEST RANDOM NUMBER SEQUENCES:
 
 #B-i:
-Random_JvN_1 = MY.RANDOM_JVN_PLOT(555555, Random_JvN_1_seedarray, 'Plot D, using JvN', 'X Values', 'Y Values', 'D', 'test1.png')
-Random_JvN_2 = MY.RANDOM_JVN_PLOT(131311, Random_JvN_2_seedarray, 'Plot E, using JvN', 'X Values', 'Y Values', 'E', 'test2.png')
-Random_JvN_3 = MY.RANDOM_JVN_PLOT(121212, Random_JvN_3_seedarray, 'Plot F, using JvN', 'X Values', 'Y Values', 'F', 'test3.png')
-MY.RANDOM_PLOT(0,1,1000, seed_1, random_1, 'A', 'Plot A of random numbers (np.random.uniform)', 'test4.png')
-MY.RANDOM_PLOT(0,1,1000, seed_2, random_2, 'B', 'Plot B of random numbers (np.random.uniform)', 'test5.png')
-MY.RANDOM_PLOT(0,1,1000, seed_3, random_3, 'C', 'Plot C of random numbers (np.random.uniform)', 'test6.png')
+MY.RANDOM_PLOT(0,1,1000, seed_1, random_1, 'A', 'Plot A of random numbers (np.random.uniform)', 'Random_uniform_1.png')
+MY.RANDOM_PLOT(0,1,1000, seed_2, random_2, 'B', 'Plot B of random numbers (np.random.uniform)', 'Random_uniform_2.png')
+MY.RANDOM_PLOT(0,1,1000, seed_3, random_3, 'C', 'Plot C of random numbers (np.random.uniform)', 'Random_uniform_3.png')
+Random_JvN_1 = MY.RANDOM_JVN_PLOT(101011, Random_JvN_1_seedarray, 'Plot D, using JvN', 'X Values', 'Y Values', 'D', 'Random_JvN_1.png')
+Random_JvN_2 = MY.RANDOM_JVN_PLOT(676767, Random_JvN_2_seedarray, 'Plot E, using JvN', 'X Values', 'Y Values', 'E', 'Random_JvN_2.png')
+Random_JvN_3 = MY.RANDOM_JVN_PLOT(989812, Random_JvN_3_seedarray, 'Plot F, using JvN', 'X Values', 'Y Values', 'F', 'Random_JvN_3.png')
 
 
 #B-ii:
 cl_hist = ['k', 'r', 'b', 'y', 'c', 'g', 3, 10, 45, 89, 65, 50]
 
-MY.RANDOM_HIST(random_1, cl_hist[0], 0.1, 'Plot A,rwidth=0.1', 'A', 'test7.png')
-MY.RANDOM_HIST(random_1, cl_hist[1], 0.025, 'Plot A,rwidth=0.025', 'A', 'test8.png')
-MY.RANDOM_HIST(random_2, cl_hist[0], 0.1, 'Plot B,rwidth=0.1', 'B', 'test9.png')
-MY.RANDOM_HIST(random_2, cl_hist[1], 0.025, 'Plot B,rwidth=0.025', 'B', 'test10.png')
-MY.RANDOM_HIST(random_3, cl_hist[0], 0.1, 'Plot C,rwidth=0.1', 'C', 'test11.png')
-MY.RANDOM_HIST(random_3, cl_hist[1], 0.025, 'Plot C,rwidth=0.025', 'C', 'test12.png')
+MY.RANDOM_HIST(random_1, cl_hist[0], 0.1, 'Plot A,rwidth=0.1', 'A', 'Random_uniform_hist_1.png')
+MY.RANDOM_HIST(random_1, cl_hist[1], 0.025, 'Plot A,rwidth=0.025', 'A', 'Random_uniform_hist_2.png')
+MY.RANDOM_HIST(random_2, cl_hist[0], 0.1, 'Plot B,rwidth=0.1', 'B', 'Random_uniform_hist_3.png')
+MY.RANDOM_HIST(random_2, cl_hist[1], 0.025, 'Plot B,rwidth=0.025', 'B', 'Random_uniform_hist_4.png')
+MY.RANDOM_HIST(random_3, cl_hist[0], 0.1, 'Plot C,rwidth=0.1', 'C', 'Random_uniform_hist_5.png')
+MY.RANDOM_HIST(random_3, cl_hist[1], 0.025, 'Plot C,rwidth=0.025', 'C', 'Random_uniform_hist_6.png')
 
-MY.RANDOM_HIST(Random_JvN_1_seedarray, cl_hist[0], 0.1, 'Plot D,rwidth=0.1', 'D', 'test13.png')
-MY.RANDOM_HIST(Random_JvN_1_seedarray, cl_hist[3], 0.025, 'Plot D,rwidth=0.025', 'D', 'test14.png')
-MY.RANDOM_HIST(Random_JvN_2_seedarray, cl_hist[0], 0.1, 'Plot F,rwidth=0.1', 'E', 'test15.png')
-MY.RANDOM_HIST(Random_JvN_2_seedarray, cl_hist[3], 0.025, 'Plot F,rwidth=0.025', 'E', 'test16.png')
-MY.RANDOM_HIST(Random_JvN_3_seedarray, cl_hist[0], 0.1, 'Plot G,rwidth=0.1', 'F', 'test17.png')
-MY.RANDOM_HIST(Random_JvN_3_seedarray, cl_hist[3], 0.025, 'Plot G,rwidth=0.025', 'F', 'test18.png')
+MY.RANDOM_HIST(Random_JvN_1_seedarray, cl_hist[0], 0.1, 'Plot D,rwidth=0.1', 'D', 'Random_JvN_hist_1.png')
+MY.RANDOM_HIST(Random_JvN_1_seedarray, cl_hist[3], 0.025, 'Plot D,rwidth=0.025', 'D', 'Random_JvN_hist_2.png')
+MY.RANDOM_HIST(Random_JvN_2_seedarray, cl_hist[0], 0.1, 'Plot F,rwidth=0.1', 'E', 'Random_JvN_hist_3.png')
+MY.RANDOM_HIST(Random_JvN_2_seedarray, cl_hist[3], 0.025, 'Plot F,rwidth=0.025', 'E', 'Random_JvN_hist_4.png')
+MY.RANDOM_HIST(Random_JvN_3_seedarray, cl_hist[0], 0.1, 'Plot G,rwidth=0.1', 'F', 'Random_JvN_hist_5.png')
+MY.RANDOM_HIST(Random_JvN_3_seedarray, cl_hist[3], 0.025, 'Plot G,rwidth=0.025', 'F', 'Random_JvN_hist_6.png')
 
 
 #B-iii-a-i:
@@ -108,7 +108,7 @@ n3_10, bins3_10, patches3_10 = plt.hist(random_3, bins=10)
 n3_40, bins3_40, patches3_40 = plt.hist(random_3, bins=40)
 n3_100, bins3_100, patches3_100 = plt.hist(random_3, bins=100)
 
-n4_10, bins4_10, patches4_10 = plt.hist(Random_JvN_1_seedarray, bins=10)
+n4_10, bins4_40, patches4_100 = plt.hist(Random_JvN_1_seedarray, bins=10)
 n4_40, bins4_40, patches4_40 = plt.hist(Random_JvN_1_seedarray, bins=40)
 n4_100, bins4_100, patches4_100 = plt.hist(Random_JvN_1_seedarray, bins=100)
 
@@ -145,3 +145,71 @@ print 'Chi, P value for random_3_JvN, bins=100:  {}'.format(MY.CHI(n6_100, 10))
 
 
 #B-iii-b-i:
+class COUNTER:
+	def __init__(self, seed_array, bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8, bin9, bin10):
+		n1_n2_in_bin_1 = 0
+		n1_n2_in_bin_2 = 0
+		n1_n2_in_bin_3 = 0
+		n1_n2_in_bin_4 = 0
+		n1_n2_in_bin_5 = 0
+		n1_n2_in_bin_6 = 0
+		n1_n2_in_bin_7 = 0
+		n1_n2_in_bin_8 = 0
+		n1_n2_in_bin_9 = 0
+		n1_n2_in_bin_10 = 0
+		n=999
+		counter = []
+		for i in range(0,n):
+			counter.append(tuple(seed_array[0+i:2+i]))
+		counter = np.array(counter)
+		for (n1,n2) in counter:
+			if ((n1 >= bin2[0]) and (n1 <= bin2[1])) and ((n2 >= bin1[0]) and (n2 <= bin1[1])):
+				n1_n2_in_bin_1 += 1
+			if ((n1 >= bin2[0]) and (n1 <= bin2[1])) and ((n2 >= bin2[0]) and (n2 <= bin2[1])):
+				n1_n2_in_bin_2 += 1
+			if ((n1 >= bin3[0]) and (n1 <= bin3[1])) and ((n2 >= bin3[0]) and (n2 <= bin3[1])):
+				n1_n2_in_bin_3 += 1
+			if ((n1 >= bin4[0]) and (n1 <= bin4[1])) and ((n2 >= bin4[0]) and (n2 <= bin4[1])):
+				n1_n2_in_bin_4 += 1
+			if ((n1 >= bin5[0]) and (n1 <= bin5[1])) and ((n2 >= bin5[0]) and (n2 <= bin5[1])):
+				n1_n2_in_bin_5 += 1
+			if ((n1 >= bin6[0]) and (n1 <= bin6[1])) and ((n2 >= bin6[0]) and (n2 <= bin6[1])):
+				n1_n2_in_bin_6 += 1
+			if ((n1 >= bin7[0]) and (n1 <= bin7[1])) and ((n2 >= bin7[0]) and (n2 <= bin7[1])):
+				n1_n2_in_bin_7 += 1
+			if ((n1 >= bin8[0]) and (n1 <= bin8[1])) and ((n2 >= bin8[0]) and (n2 <= bin8[1])):
+				n1_n2_in_bin_8 += 1
+			if ((n1 >= bin9[0]) and (n1 <= bin9[1])) and ((n2 >= bin9[0]) and (n2 <= bin9[1])):
+				n1_n2_in_bin_9 += 1
+			if ((n1 >= bin2[0]) and (n1 <= bin10[1])) and ((n2 >= bin10[0]) and (n2 <= bin10[1])):
+				n1_n2_in_bin_10 += 1
+		print 'n1 and n2 are bin 1: {}'.format(n1_n2_in_bin_1)
+		print 'n1 and n2 are bin 2: {}'.format(n1_n2_in_bin_2)
+		print 'n1 and n2 are bin 3: {}'.format(n1_n2_in_bin_3)
+		print 'n1 and n2 are bin 4: {}'.format(n1_n2_in_bin_4)
+		print 'n1 and n2 are bin 5: {}'.format(n1_n2_in_bin_5)
+		print 'n1 and n2 are bin 6: {}'.format(n1_n2_in_bin_6)
+		print 'n1 and n2 are bin 7: {}'.format(n1_n2_in_bin_7)
+		print 'n1 and n2 are bin 8: {}'.format(n1_n2_in_bin_8)
+		print 'n1 and n2 are bin 9: {}'.format(n1_n2_in_bin_9)
+		print 'n1 and n2 are bin 10: {}'.format(n1_n2_in_bin_10)
+bin1 = 0.001997,  0.1017897
+bin2 = 0.1017897, 0.2015824
+bin3 = 0.2015824, 0.3013751
+bin4 = 0.3013751, 0.4011678
+bin5 = 0.4011678, 0.5009605
+bin6 = 0.5009605, 0.6007532
+bin7 = 0.6007532, 0.7005459
+bin8 = 0.7005459, 0.8003386
+bin9 = 0.8003386, 0.9001313
+bin10 = 0.9001313, 0.999924
+
+JvN_1_hist_01, bins1 = np.histogram(Random_JvN_1_seedarray, bins=10)
+JvN_2_hist_02, bins2 = np.histogram(Random_JvN_2_seedarray, bins=10)
+JvN_3_hist_03, bins3 = np.histogram(Random_JvN_3_seedarray, bins=10)
+print 'JvN 100-element array #1: '
+COUNTER(Random_JvN_1_seedarray, bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8, bin9, bin10)
+print '\n \n JvN 100-element array #2: '
+COUNTER(Random_JvN_2_seedarray, bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8, bin9, bin10)
+print '\n \n JvN 100-element array #3: '
+COUNTER(Random_JvN_3_seedarray, bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8, bin9, bin10)

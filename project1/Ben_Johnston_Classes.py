@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy as sp 
 from scipy.stats import chisquare
+import random
 class RANDOM_PLOT: #Plots 3 random number graphs per figure (or page).
 	def __init__(self, low_limit, high_limit, size, sd1, random, lb1, title, save):
 		plt.figure(figsize=(18,12))
@@ -41,6 +42,10 @@ class CHI:
 		chi2, p_value = chisquare(obs, exp)
 		print 'Chi-Square value: {}'.format(chi2)
 		print 'P value: {}'.format(p_value)
+		if p_value < 0.05:
+			print 'The p value is less than the significance value (0.05), therefore the null hypothesis is rejected.'
+		if p_value >= 0.05:
+			print 'The p value is greater than the significance value (0.05), therefore the null hypothesis is accepted.'
 
 
 #PROJECT 2:
