@@ -17,7 +17,7 @@ class RANDOM_PLOT: #Plots 3 random number graphs per figure (or page).
 		plt.ylabel('Y values')
 		plt.savefig(save, dpi=300)
 		# plt.show()
-class RANDOM_JVN_PLOT: #Plots the 1000 John von Nuemann seeds, starting with a different seed for every loop
+class RANDOM_JVN_PLOT: #Plots the John von Nuemann method for random numbers, starting with a different seed for every loop
 	def __init__(self, seed_input, random_input, title, xlabel, ylabel, label, save):
 		plt.figure(figsize=(18,12))
 		plt.plot(random_input, label=label)
@@ -28,10 +28,10 @@ class RANDOM_JVN_PLOT: #Plots the 1000 John von Nuemann seeds, starting with a d
 		plt.savefig(save, dpi=300)
 		# plt.show()
 class RANDOM_HIST: #Plots 4 random number histograms per figure (or page).
-	def __init__(self, rand1, color1, rwidth, title_str, lb1, save):
+	def __init__(self, rand1, color1, bins, title_str, lb1, save):
 		plt.figure(figsize=(18,12))
 		plt.title(title_str)
-		plt.hist(rand1, color=color1, rwidth=rwidth, label=lb1)
+		plt.hist(rand1, color=color1, bins=bins, label=lb1)
 		plt.legend()
 		plt.xlabel('Random Numbers')
 		plt.ylabel('Frequency')
@@ -46,6 +46,12 @@ class CHI:
 			print 'The p value is less than the significance value (0.05), therefore the null hypothesis is rejected.'
 		if p_value >= 0.05:
 			print 'The p value is greater than the significance value (0.05), therefore the null hypothesis is accepted.'
+class CHI2:
+	def __init__(self, bin_array, expected, upper_lim, lower_lim, array_name):
+		for i in range(lower_lim, upper_lim):
+			chi = np.sum(((bin_array[i]-expected)**2/expected))
+		print '\n Chi square comparison for {}:'.format(array_name)
+		print chi
 
 
 #PROJECT 2:
