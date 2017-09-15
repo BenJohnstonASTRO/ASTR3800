@@ -90,26 +90,30 @@ MY.RANDOM_PLOT(0,1,1000, seed_3, random_3, 'C', 'Plot C of random numbers (np.ra
 Random_JvN_1 = MY.RANDOM_JVN_PLOT(Random_JvN_seed_1, Random_JvN_1_seedarray, 'Plot D, using JvN', 'X Values', 'Y Values', 'D', 'Random_JvN_1.png')
 Random_JvN_2 = MY.RANDOM_JVN_PLOT(Random_JvN_seed_2, Random_JvN_2_seedarray, 'Plot E, using JvN', 'X Values', 'Y Values', 'E', 'Random_JvN_2.png')
 Random_JvN_3 = MY.RANDOM_JVN_PLOT(Random_JvN_seed_3, Random_JvN_3_seedarray, 'Plot F, using JvN', 'X Values', 'Y Values', 'F', 'Random_JvN_3.png')
+MY.RANDOM_UNIFORM_ALL(random_1, random_2, random_3, 'Histogram of all three Uniform sets, BINS=10.png', 'Histogram of all uniform sets', 'Uniform set_1', 'Uniform set_2', 'Uniform set_3', 10)
+MY.RANDOM_JVN_ALL(Random_JvN_1_seedarray, Random_JvN_2_seedarray, Random_JvN_3_seedarray, 'Histogram of all three JvN sets, BINS=10.png', 'Histogram of all JvN sets', 'JvN set_1', 'JvN set_2', 'JvN set_3', 10)
+MY.RANDOM_UNIFORM_ALL(random_1, random_2, random_3, 'Histogram of all three Uniform sets, BINS=40.png', 'Histogram of all uniform sets', 'Uniform set_1', 'Uniform set_2', 'Uniform set_3', 40)
+MY.RANDOM_JVN_ALL(Random_JvN_1_seedarray, Random_JvN_2_seedarray, Random_JvN_3_seedarray, 'Histogram of all three JvN sets, BINS=40.png', 'Histogram of all JvN sets', 'JvN set_1', 'JvN set_2', 'JvN set_3', 40)
 print 'END PROJECT 1 -- PART B-i\n\n\n\n'
 
 
 #B-ii:
 print 'BEGIN PROJECT 1 -- PART B-ii\n\n'
-cl_hist = ['k', 'r', 'b', 'y', 'c', 'g', 3, 10, 45, 89, 65, 50]
+cl_hist = ['k', 'r', 'b', 'y', 'c', 'g', 'm', 'orange', 'darkgreen', 'darkred', 'darkblue', 'crimson']
 
-MY.RANDOM_HIST(random_1, cl_hist[0], 10, 'Plot A,bins=10', 'A', 'Random_uniform_hist_1.png')
-MY.RANDOM_HIST(random_1, cl_hist[1], 40, 'Plot A,bins=40', 'A', 'Random_uniform_hist_2.png')
-MY.RANDOM_HIST(random_2, cl_hist[0], 10, 'Plot B,bins=10', 'B', 'Random_uniform_hist_3.png')
-MY.RANDOM_HIST(random_2, cl_hist[1], 40, 'Plot B,bins=40', 'B', 'Random_uniform_hist_4.png')
-MY.RANDOM_HIST(random_3, cl_hist[0], 10, 'Plot C,bins=10', 'C', 'Random_uniform_hist_5.png')
-MY.RANDOM_HIST(random_3, cl_hist[1], 40, 'Plot C,bins=40', 'C', 'Random_uniform_hist_6.png')
+MY.RANDOM_HIST(random_1, cl_hist[0], 10, 'Histogram A, bins=10', 'A', 'Random_uniform_hist_1.png')
+MY.RANDOM_HIST(random_1, cl_hist[1], 40, 'Histogram A, bins=40', 'A', 'Random_uniform_hist_2.png')
+MY.RANDOM_HIST(random_2, cl_hist[2], 10, 'Histogram B, bins=10', 'B', 'Random_uniform_hist_3.png')
+MY.RANDOM_HIST(random_2, cl_hist[3], 40, 'Histogram B, bins=40', 'B', 'Random_uniform_hist_4.png')
+MY.RANDOM_HIST(random_3, cl_hist[4], 10, 'Histogram C, bins=10', 'C', 'Random_uniform_hist_5.png')
+MY.RANDOM_HIST(random_3, cl_hist[5], 40, 'Histogram C, bins=40', 'C', 'Random_uniform_hist_6.png')
 
-MY.RANDOM_HIST(Random_JvN_1_seedarray, cl_hist[0], 10, 'Plot D,bins=10', 'D', 'Random_JvN_hist_1.png')
-MY.RANDOM_HIST(Random_JvN_1_seedarray, cl_hist[3], 40, 'Plot D,bins=40', 'D', 'Random_JvN_hist_2.png')
-MY.RANDOM_HIST(Random_JvN_2_seedarray, cl_hist[0], 10, 'Plot F,bins=10', 'E', 'Random_JvN_hist_3.png')
-MY.RANDOM_HIST(Random_JvN_2_seedarray, cl_hist[3], 40, 'Plot F,bins=40', 'E', 'Random_JvN_hist_4.png')
-MY.RANDOM_HIST(Random_JvN_3_seedarray, cl_hist[0], 10, 'Plot G,bins=10', 'F', 'Random_JvN_hist_5.png')
-MY.RANDOM_HIST(Random_JvN_3_seedarray, cl_hist[3], 40, 'Plot G,bins=40', 'F', 'Random_JvN_hist_6.png')
+MY.RANDOM_HIST(Random_JvN_1_seedarray, cl_hist[6], 10, 'Histogram D (JvN), bins=10', 'D', 'Random_JvN_hist_1.png')
+MY.RANDOM_HIST(Random_JvN_1_seedarray, cl_hist[7], 40, 'Histogram D (JvN), bins=40', 'D', 'Random_JvN_hist_2.png')
+MY.RANDOM_HIST(Random_JvN_2_seedarray, cl_hist[8], 10, 'Histogram E (JvN), bins=10', 'E', 'Random_JvN_hist_3.png')
+MY.RANDOM_HIST(Random_JvN_2_seedarray, cl_hist[9], 40, 'Histogram E (JvN), bins=40', 'E', 'Random_JvN_hist_4.png')
+MY.RANDOM_HIST(Random_JvN_3_seedarray, cl_hist[10], 10, 'Histogram F (JvN), bins=10', 'F', 'Random_JvN_hist_5.png')
+MY.RANDOM_HIST(Random_JvN_3_seedarray, cl_hist[11], 40, 'Histogram F (JvN), bins=40', 'F', 'Random_JvN_hist_6.png')
 print 'END PROJECT 1 -- PART B-ii\n\n\n\n'
 
 
@@ -128,7 +132,7 @@ n3_10, bins3_10, patches3_10 = plt.hist(random_3, bins=10)
 n3_40, bins3_40, patches3_40 = plt.hist(random_3, bins=40)
 n3_100, bins3_100, patches3_100 = plt.hist(random_3, bins=100)
 
-n4_10, bins4_40, patches4_100 = plt.hist(Random_JvN_1_seedarray, bins=10)
+n4_10, bins4_10, patches4_100 = plt.hist(Random_JvN_1_seedarray, bins=10)
 n4_40, bins4_40, patches4_40 = plt.hist(Random_JvN_1_seedarray, bins=40)
 n4_100, bins4_100, patches4_100 = plt.hist(Random_JvN_1_seedarray, bins=100)
 
@@ -187,7 +191,7 @@ class COUNTER:
 			counter.append(tuple(seed_array[0+i:2+i]))
 		counter = np.array(counter)
 		for (n1,n2) in counter:
-			if ((n1 >= bin2[0]) and (n1 <= bin2[1])) and ((n2 >= bin1[0]) and (n2 <= bin1[1])):
+			if ((n1 >= bin1[0]) and (n1 <= bin2[1])) and ((n2 >= bin1[0]) and (n2 <= bin1[1])):
 				self.n1_n2_in_bin_1 += 1
 			if ((n1 >= bin2[0]) and (n1 <= bin2[1])) and ((n2 >= bin2[0]) and (n2 <= bin2[1])):
 				self.n1_n2_in_bin_2 += 1
@@ -205,7 +209,7 @@ class COUNTER:
 				self.n1_n2_in_bin_8 += 1
 			if ((n1 >= bin9[0]) and (n1 <= bin9[1])) and ((n2 >= bin9[0]) and (n2 <= bin9[1])):
 				self.n1_n2_in_bin_9 += 1
-			if ((n1 >= bin2[0]) and (n1 <= bin10[1])) and ((n2 >= bin10[0]) and (n2 <= bin10[1])):
+			if ((n1 >= bin10[0]) and (n1 <= bin10[1])) and ((n2 >= bin10[0]) and (n2 <= bin10[1])):
 				self.n1_n2_in_bin_10 += 1
 		print 'n1 and n2 are bin 1: {}'.format(self.n1_n2_in_bin_1)
 		print 'n1 and n2 are bin 2: {}'.format(self.n1_n2_in_bin_2)
@@ -218,16 +222,21 @@ class COUNTER:
 		print 'n1 and n2 are bin 9: {}'.format(self.n1_n2_in_bin_9)
 		print 'n1 and n2 are bin 10: {}'.format(self.n1_n2_in_bin_10)
 		self.total = self.n1_n2_in_bin_1, self.n1_n2_in_bin_2, self.n1_n2_in_bin_3, self.n1_n2_in_bin_4, self.n1_n2_in_bin_5, self.n1_n2_in_bin_6, self.n1_n2_in_bin_7, self.n1_n2_in_bin_8, self.n1_n2_in_bin_9, self.n1_n2_in_bin_10
-bin1 = 0.001997,  10017897
-bin2 = 10017897, 0.2015824
-bin3 = 0.2015824, 0.3013751
-bin4 = 0.3013751, 0.4011678
-bin5 = 0.4011678, 0.5009605
-bin6 = 0.5009605, 0.6007532
-bin7 = 0.6007532, 0.7005459
-bin8 = 0.7005459, 0.8003386
-bin9 = 0.8003386, 0.9001313
-bin10 = 0.9001313, 0.9999243
+		expected = 100
+		label = 'Bin_1', 'Bin_2', 'Bin_3', 'Bin_4', 'Bin_5', 'Bin_6', 'Bin_7', 'Bin_8', 'Bin_9', 'Bin_10'
+		for i in range(0,9):
+			print label[i]  
+			print np.sum(((self.total[i]-expected)**2)/expected)
+bin1 = 0, 0.1
+bin2 = 0.1, 0.2
+bin3 = 0.2, 0.3
+bin4 = 0.3, 0.4
+bin5 = 0.4, 0.5
+bin6 = 0.5, 0.6
+bin7 = 0.6, 0.7
+bin8 = 0.7, 0.8
+bin9 = 0.8, 0.9
+bin10 = 0.9, 1
 
 JvN_1_hist_01, bins1 = np.histogram(Random_JvN_1_seedarray, bins=10)
 JvN_2_hist_02, bins2 = np.histogram(Random_JvN_2_seedarray, bins=10)
